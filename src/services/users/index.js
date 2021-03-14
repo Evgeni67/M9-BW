@@ -224,7 +224,7 @@ usersRouter.post(
 	async (req, res, next) => {
 		try {
 			const post = { profilePicUrl: req.file.path }
-			const author = await UserSchema.findById(req.params.id, {
+			const author = await UserModel.findById(req.params.id, {
 				_id: 0,
 				user: 1,
 			})
